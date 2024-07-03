@@ -3,56 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body class="font-opensans">
+<body>
     <header class="page-header h-[104px] tracking-[1.008px]">
-        <div class="header-inner py-4">
-            <div class="header-container max-w-[1280px] mx-auto">
-                <div class="flex px-6">
-                    <a href="home.html" class="logo w-[35%] flex-shrink-0">
-                        <img src="../assets/images/logo.png" class="max-h-[72px] h-[72px]" alt="jullytea">
+        <div class="px-6 py-2 lg:py-4 header-inner">
+            <div class="header-container 2xl:w-[1280px] xl:w-[1160px] lg:w-[984px] md:w-full mx-auto">
+                <div class="flex lg:px-6">
+                    <a href="home.html" class="max-lg:px-2 logo w-[70%] lg:w-[35%] flex-shrink-0">
+                        <img src="../assets/images/logo.png" class="max-h-[64px] lg:max-h-[72px] h-[72px]" alt="jullytea">
                     </a>
-                    <div class="min-w-[65%] flex header-right items-center justify-end">
-                        <nav role="navigation" class="header-nav">
+                    <div class="w-[30%] lg:w-[65%] flex header-right items-center justify-end">
+                        <nav role="navigation" class="header-nav max-lg:hidden">
                             <ul class="flex items-center gap-8 text-theme">
                                 <li>
-                                    <a href="home.html" class="pb-1 border-dark border-b">Trang chủ</a>
+                                    <a href="home.html" class="pb-1 border-b p-[6px] m-[-6px] border-dark">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="#">Về Jully Tea</a>
+                                    <a href="#" class="p-[6px] m-[-6px]">Về Jully Tea</a>
                                 </li>
-                                <li>
-                                    <a href="#">Chuyện trà</a>
+                                <li class="relative xl:hidden link-dropdown">
+                                    <a href="#" class="flex items-center p-[6px] m-[-6px]">
+                                        Xem thêm
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="transition-all icon-arrow-down x-el x-el-svg c2-1 c2-2 c2-r c2-s c2-t c2-u c2-v c2-w c2-l c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032"></path></svg>
+                                    </a>
+                                    <ul class="absolute right-0 flex flex-col p-4 bg-white top-8 menu-dropdown shadow-shadow1 max-h-[45vh] rounded overflow-y-auto">
+                                        <li class="py-2 w-max">
+                                            <a href="#">Chuyện trà</a>
+                                        </li>
+                                        <li class="py-2 w-max">
+                                            <a href="#">Sản phẩm</a>
+                                        </li>
+                                        <li class="py-2 w-max">
+                                            <a href="#">Liên hệ</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="#">Sản phẩm</a>
+                                <li class="max-xl:hidden">
+                                    <a href="#" class="p-[6px] m-[-6px]">Chuyện trà</a>
                                 </li>
-                                <li>
-                                    <a href="#">Liên hệ</a>
+                                <li class="max-xl:hidden">
+                                    <a href="#" class="p-[6px] m-[-6px]">Sản phẩm</a>
+                                </li>
+                                <li class="max-xl:hidden">
+                                    <a href="#" class="p-[6px] m-[-6px]">Liên hệ</a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="header-actions flex items-center">
-                            <div class="w-[2px] h-[18px] bg-dark ml-6 mr-4"></div>
-                            <div class="header-icon icon-search cursor-pointer">
-                                <svg class="p-[6px]" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-aid="SEARCH_ICON_RENDERED" data-typography="NavAlpha" class="x-el x-el-svg c2-g c2-2 c2-n c2-s c2-y c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-l c2-14 c2-15 c2-16 c2-17 c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-18 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.504 18.461a.76.76 0 0 1 0 1.038.652.652 0 0 1-.956 0L15.2 15.993a6.142 6.142 0 0 1-3.83 1.353C7.858 17.346 5 14.353 5 10.673 5 6.994 7.858 4 11.371 4c3.513 0 6.371 2.994 6.371 6.673a6.82 6.82 0 0 1-1.536 4.333l3.298 3.455zM6.377 10.673c0 2.884 2.24 5.231 4.994 5.231 2.754 0 4.994-2.347 4.994-5.231s-2.24-5.23-4.994-5.23c-2.754 0-4.994 2.346-4.994 5.23z"></path></svg>
+                        <div class="flex items-center header-actions">
+                            <div class="w-[2px] h-[18px] bg-dark ml-6 mr-4 max-lg:hidden"></div>
+                            <div class="cursor-pointer header-icon icon-search max-lg:hidden">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-aid="SEARCH_ICON_RENDERED" data-typography="NavAlpha" class="p-[6px] x-el x-el-svg c2-g c2-2 c2-n c2-s c2-y c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-l c2-14 c2-15 c2-16 c2-17 c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-18 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.504 18.461a.76.76 0 0 1 0 1.038.652.652 0 0 1-.956 0L15.2 15.993a6.142 6.142 0 0 1-3.83 1.353C7.858 17.346 5 14.353 5 10.673 5 6.994 7.858 4 11.371 4c3.513 0 6.371 2.994 6.371 6.673a6.82 6.82 0 0 1-1.536 4.333l3.298 3.455zM6.377 10.673c0 2.884 2.24 5.231 4.994 5.231 2.754 0 4.994-2.347 4.994-5.231s-2.24-5.23-4.994-5.23c-2.754 0-4.994 2.346-4.994 5.23z"></path></svg>
                             </div>
-                            <div class="header-icon icon-cart cursor-pointer">
-                                <svg class="p-[6px]" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-aid="CART_ICON_RENDER" data-typography="NavAlpha" class="x-el x-el-svg c2-g c2-2 c2-n c2-s c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M17.39 17.381c-.713 0-1.305.593-1.305 1.31 0 .715.592 1.31 1.305 1.31s1.305-.595 1.305-1.31c0-.717-.592-1.31-1.305-1.31m-9.133 0c-.713 0-1.305.593-1.305 1.31 0 .715.592 1.31 1.305 1.31s1.305-.595 1.305-1.31c0-.717-.592-1.31-1.305-1.31m9.765-2.061c.357 0 .673.376.673.734 0 .359-.295.735-.652.735H7.605a.659.659 0 0 1-.653-.655c0-.219.22-.654.409-1.006.138-.257.179-.553.118-.839L5.77 5.309H4.652A.658.658 0 0 1 4 4.655C4 4.297 4.296 4 4.652 4h1.774c.683 0 .704.819.805 1.309h12.116c.357 0 .653.297.653.655l-1.358 4.917a3.167 3.167 0 0 1-2.509 2.095l-7.356 1.132s.172.257.172.565c0 .308-.305.647-.305.647h9.378zM7.531 6.809l1.139 5.722 7.292-1.02a1.568 1.568 0 0 0 1.253-1.124l1.07-3.679-10.754.101z"></path></svg>
+                            <div class="cursor-pointer header-icon icon-cart hover:text-primaryLight">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-aid="CART_ICON_RENDER" data-typography="NavAlpha" class="p-[6px] x-el x-el-svg c2-g c2-2 c2-n c2-s c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M17.39 17.381c-.713 0-1.305.593-1.305 1.31 0 .715.592 1.31 1.305 1.31s1.305-.595 1.305-1.31c0-.717-.592-1.31-1.305-1.31m-9.133 0c-.713 0-1.305.593-1.305 1.31 0 .715.592 1.31 1.305 1.31s1.305-.595 1.305-1.31c0-.717-.592-1.31-1.305-1.31m9.765-2.061c.357 0 .673.376.673.734 0 .359-.295.735-.652.735H7.605a.659.659 0 0 1-.653-.655c0-.219.22-.654.409-1.006.138-.257.179-.553.118-.839L5.77 5.309H4.652A.658.658 0 0 1 4 4.655C4 4.297 4.296 4 4.652 4h1.774c.683 0 .704.819.805 1.309h12.116c.357 0 .653.297.653.655l-1.358 4.917a3.167 3.167 0 0 1-2.509 2.095l-7.356 1.132s.172.257.172.565c0 .308-.305.647-.305.647h9.378zM7.531 6.809l1.139 5.722 7.292-1.02a1.568 1.568 0 0 0 1.253-1.124l1.07-3.679-10.754.101z"></path></svg>
                             </div>
-                            <div class="header-icon icon-user cursor-pointer">
-                                <svg class="p-[6px]" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-typography="NavAlpha" class="x-el x-el-svg c2-g c2-2 c2-r c2-s c2-1f c2-1g c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-w c2-l c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M5.643 19.241a.782.782 0 0 1-.634-.889c.317-2.142 1.62-4.188 3.525-5.244l.459-.254-.39-.352a4.89 4.89 0 0 1-.797-6.327 4.747 4.747 0 0 1 2.752-2.003 4.894 4.894 0 0 1 6.092 5.72c-.211 1.042-.802 1.97-1.59 2.683l-.308.28.459.253c1.876 1.04 3.185 3.131 3.53 5.26a.765.765 0 0 1-.742.883c-.367.005-.697-.25-.753-.613-.52-3.384-4.067-6.087-7.702-4.324-1.628.79-2.714 2.511-3.014 4.313a.76.76 0 0 1-.887.614zm2.873-10.36a3.36 3.36 0 0 0 3.356 3.355A3.36 3.36 0 0 0 15.23 8.88a3.361 3.361 0 0 0-3.358-3.357A3.36 3.36 0 0 0 8.516 8.88z"></path></svg>
+                            <div class="cursor-pointer header-icon icon-user max-lg:hidden">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="UtilitiesMenuIcon" data-typography="NavAlpha" class="p-[6px] x-el x-el-svg c2-g c2-2 c2-r c2-s c2-1f c2-1g c2-v c2-z c2-10 c2-11 c2-12 c2-13 c2-w c2-l c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M5.643 19.241a.782.782 0 0 1-.634-.889c.317-2.142 1.62-4.188 3.525-5.244l.459-.254-.39-.352a4.89 4.89 0 0 1-.797-6.327 4.747 4.747 0 0 1 2.752-2.003 4.894 4.894 0 0 1 6.092 5.72c-.211 1.042-.802 1.97-1.59 2.683l-.308.28.459.253c1.876 1.04 3.185 3.131 3.53 5.26a.765.765 0 0 1-.742.883c-.367.005-.697-.25-.753-.613-.52-3.384-4.067-6.087-7.702-4.324-1.628.79-2.714 2.511-3.014 4.313a.76.76 0 0 1-.887.614zm2.873-10.36a3.36 3.36 0 0 0 3.356 3.355A3.36 3.36 0 0 0 15.23 8.88a3.361 3.361 0 0 0-3.358-3.357A3.36 3.36 0 0 0 8.516 8.88z"></path></svg>
+                            </div>
+                            <div class="cursor-pointer header-icon icon-bar lg:hidden hover:text-primaryLight">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="IconHamburger" class="p-[6px] x-el x-el-svg c2-1 c2-2 c2-1d c2-x c2-1e c2-z c2-10 c2-11 c2-12 c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.248 7.5H4.752A.751.751 0 0 1 4 6.75c0-.414.337-.75.752-.75h14.496a.75.75 0 1 1 0 1.5m0 5.423H4.752a.75.75 0 0 1 0-1.5h14.496a.75.75 0 1 1 0 1.5m0 5.423H4.752a.75.75 0 1 1 0-1.5h14.496a.75.75 0 1 1 0 1.5"></path></svg>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="fixed top-0 left-0 w-full h-full bg-dark2 nav-mobile transition-all pt-[56px] z-[99]">
+            <div class="absolute icon-close hover:text-pink1 cursor-pointer right-[15px] top-[15px] text-white">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="CloseIcon" data-edit-interactive="true" data-close="true" class="p-[6px] x-el x-el-svg c1-1 c1-2 c1-6g c1-1h c1-29 c1-3a c1-3b c1-3c c1-3d c1-1r c1-6h c1-6i c1-4n c1-6j c1-6k c1-6l c1-b c1-6m c1-6n c1-6o c1-6p c1-6q"><path fill-rule="evenodd" d="M19.219 5.22a.75.75 0 0 0-1.061 0l-5.939 5.939-5.939-5.94a.75.75 0 1 0-1.061 1.062l5.939 5.939-5.939 5.939a.752.752 0 0 0 0 1.06.752.752 0 0 0 1.061 0l5.939-5.938 5.939 5.939a.75.75 0 1 0 1.061-1.061l-5.939-5.94 5.939-5.938a.75.75 0 0 0 0-1.061"></path></svg>
+            </div>
+            <div class="max-h-full px-6 overflow-auto text-gray1">
+                <ul class="nav-list">
+                    <li class="border-b border-grayBorder">
+                        <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Trang chủ</a>
+                    </li>
+                    <li class="border-b border-grayBorder">
+                        <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Về Jully Tea</a>
+                    </li>
+                    <li class="border-b border-grayBorder">
+                        <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Chuyện trà</a>
+                    </li>
+                    <li class="border-b border-grayBorder">
+                        <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Sản phẩm</a>
+                    </li>
+                    <li class="">
+                        <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="header-actions-mobile">
+                    <div class="py-2 header-search-mobile">
+                        <form action="" class="relative">
+                            <input type="text" class="w-full px-10 py-4 border-0 bg-gray3 text-gray2 focus:border focus:border-white" placeholder="Tìm kiếm sản phẩm">
+                            <div class="absolute text-black -translate-y-1/2 icon-search left-2 top-1/2">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" data-ux="IconSearch" data-aid="SEARCH_ICON_RENDERED_OPEN" class="x-el x-el-svg c2-1 c2-2 c2-1d c2-x c2-y c2-r c2-26 c2-27 c2-3 c2-4 c2-28 c2-29 c2-2a c2-2b c2-2c c2-2d c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.504 18.461a.76.76 0 0 1 0 1.038.652.652 0 0 1-.956 0L15.2 15.993a6.142 6.142 0 0 1-3.83 1.353C7.858 17.346 5 14.353 5 10.673 5 6.994 7.858 4 11.371 4c3.513 0 6.371 2.994 6.371 6.673a6.82 6.82 0 0 1-1.536 4.333l3.298 3.455zM6.377 10.673c0 2.884 2.24 5.231 4.994 5.231 2.754 0 4.994-2.347 4.994-5.231s-2.24-5.23-4.994-5.23c-2.754 0-4.994 2.346-4.994 5.23z"></path></svg>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="header-account-mobile">
+                        <ul class="account-list">
+                            <li class="border-b border-grayBorder">
+                                <p href="" class="md:text-[16px] text-gray2 px-6 py-2 block">Tài khoản</p>
+                            </li>
+                            <li class="border-b border-grayBorder">
+                                <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Đăng nhập</a>
+                            </li>
+                            <li class="border-b border-grayBorder">
+                                <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Đơn hàng</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="block px-6 py-4 transition-all hover:text-pink1">Tài khoản của tôi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+    <main class="page-main">
+        <section class="home-banner">
+            <img src="../assets/images/banner.png" loading="lazy" alt="jully tea">
+        </section>
+        <section class="home-about">
+            <div class="px-6 py-10 lg:w-[984px] xl:w-[1160px] 2xl:w-[1280px] mx-auto">
+                <div class="max-md:flex max-md:flex-col md:grid md:grid-cols-2 gap-4 md:gap-12 text-[22px] text-dark leading-[27.5px]">
+                    <div class="flex flex-col items-center">
+                        <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/Banner1.jpg/:/cr=t:0%25,l:5.64%25,w:88.71%25,h:100%25/rs=w:600,h:451.12781954887214,cg:true" class="mb-4" alt="">
+                        <h3 class="mb-4 md:mb-6">Về Jully Tea</h3>
+                        <a href="#" class="flex-center button-primary-small max-w-max tracking-[0.882px]">Tìm hiểu thêm</a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/Banner3.jpg/:/cr=t:0%25,l:5.64%25,w:88.71%25,h:100%25/rs=w:600,h:451.12781954887214,cg:true" class="mb-4" alt="">
+                        <h3 class="mb-4 md:mb-6">Các sản phẩm trà</h3>
+                        <a href="#" class="flex-center button-primary-small max-w-max tracking-[0.882px]">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home-category">
+            <div class="px-6 py-10">
+                <div class="mb-10">
+                    <h2 class="font-georgia text-[22px] leading-[1.4] text-dark3">Danh mục sản phẩm</h2>
+                    <hr class="mt-4 border-b border-gray7">
+                </div>
+                <div>
+                    <div class="grid gap-12 lg:grid-cols-2">
+                        <div>
+                            <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/ols/PNC%20Kim%20V%C5%A9%20Kh%E1%BB%95ng%20T%C6%B0%E1%BB%9Bc.png/:/cr=t:25%25,l:0%25,w:100%25,h:50%25/rs=w:2558,m" alt="jully tea">
+                        </div>
+                        <div>
+                            <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/ols/PNC%20Kim%20V%C5%A9%20Kh%E1%BB%95ng%20T%C6%B0%E1%BB%9Bc.png/:/cr=t:25%25,l:0%25,w:100%25,h:50%25/rs=w:2558,m" alt="jully tea">
+                        </div>
+                        <div>
+                            <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/ols/PNC%20Kim%20V%C5%A9%20Kh%E1%BB%95ng%20T%C6%B0%E1%BB%9Bc.png/:/cr=t:25%25,l:0%25,w:100%25,h:50%25/rs=w:2558,m" alt="jully tea">
+                        </div>
+                        <div>
+                            <img src="https://img1.wsimg.com/isteam/ip/c05df287-eb66-423e-a440-c36b23cd7014/ols/PNC%20Kim%20V%C5%A9%20Kh%E1%BB%95ng%20T%C6%B0%E1%BB%9Bc.png/:/cr=t:25%25,l:0%25,w:100%25,h:50%25/rs=w:2558,m" alt="jully tea">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="page-subscribe">
+        <div class="px-6 py-10 text-center bg-white md:max-w-[83.3333%] lg:max-w-[66.6667%] mx-auto">
+            <h2 class="mb-8 font-georgia text-[32px] md:text-[38px]">Đăng ký</h2>
+            <p class="mb-4 text-base tracking-normal text-gray4">Hưởng ưu đãi giảm giá khi mua lần đầu khi bạn đăng ký bản tin của chúng tôi!</p>
+            <form action="" class="md:flex md:gap-6">
+                <div class="relative max-md:mb-6 md:flex-1">
+                    <input type="email" name="" id="email-subscribe" class="w-full px-4 pt-6 pb-2 transition-all border border-gray5">
+                    <label for="" class="absolute pointer-events-none transition-all text-gray4 left-4 top-[30%]">Email</label>
+                </div>
+                <button class="button-primary w-full md:max-w-[30%] md:h-auto">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="px-6 py-10 text-center bg-primary">
+            <div class="w-full h-[0.8px] xl:w-[1112px] 2xl:w-[1280px] mx-auto divider bg-white my-6">
+            </div>
+            <ul class="mb-8 text-white flex-center footer-social">
+                <li>
+                    <a href="">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="IconSocial" class="p-[6px] x-el x-el-svg c1-1 c1-2 c1-b8 c1-1h c1-29 c1-3a c1-3b c1-3c c1-3d c1-b c1-c c1-d c1-e c1-f c1-g"><path fill-rule="evenodd" d="M22 12.061C22 6.505 17.523 2 12 2S2 6.505 2 12.061c0 5.022 3.657 9.184 8.438 9.939v-7.03h-2.54v-2.91h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.197 2.238.197v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.888h2.773l-.443 2.908h-2.33V22c4.78-.755 8.437-4.917 8.437-9.939z"></path></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="IconSocial" class="p-[6px] x-el x-el-svg c1-1 c1-2 c1-b8 c1-1h c1-29 c1-3a c1-3b c1-3c c1-3d c1-b c1-c c1-d c1-e c1-f c1-g"><path d="M16.604 8.516c.13.35.198.719.203 1.091.033.622.033.811.033 2.386 0 1.574-.004 1.763-.033 2.385a3.273 3.273 0 0 1-.203 1.091 1.956 1.956 0 0 1-1.12 1.12c-.35.13-.719.198-1.091.204-.622.032-.811.032-2.386.032-1.574 0-1.763-.003-2.385-.032a3.273 3.273 0 0 1-1.091-.204 1.956 1.956 0 0 1-1.12-1.12 3.273 3.273 0 0 1-.204-1.09c-.032-.623-.032-.812-.032-2.386 0-1.575.003-1.764.032-2.386.006-.372.074-.741.204-1.09a1.956 1.956 0 0 1 1.12-1.12c.35-.13.718-.199 1.09-.204.623-.033.812-.033 2.386-.033 1.575 0 1.764.004 2.386.033.372.005.741.074 1.09.203.515.2.922.606 1.12 1.12zM12 15.033a3.033 3.033 0 1 0 0-6.066 3.033 3.033 0 0 0 0 6.066zm3.153-5.477a.71.71 0 1 0 0-1.418.71.71 0 0 0 0 1.418zM12 13.967a1.967 1.967 0 1 1 0-3.934 1.967 1.967 0 0 1 0 3.934zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10A10 10 0 0 0 12 2zm5.87 12.433c-.01.49-.102.974-.274 1.432a3.018 3.018 0 0 1-1.727 1.728 4.335 4.335 0 0 1-1.433.272c-.629.03-.829.037-2.432.037-1.604 0-1.819 0-2.433-.037a4.335 4.335 0 0 1-1.433-.272 3.018 3.018 0 0 1-1.727-1.728 4.335 4.335 0 0 1-.273-1.432c-.029-.63-.036-.83-.036-2.433 0-1.604 0-1.818.036-2.433.01-.49.102-.974.273-1.432a3.018 3.018 0 0 1 1.727-1.728 4.335 4.335 0 0 1 1.433-.272c.629-.03.829-.037 2.433-.037 1.603 0 1.818 0 2.432.037.49.009.974.101 1.433.272.794.307 1.42.934 1.727 1.728.172.458.264.943.273 1.432.03.63.036.83.036 2.433 0 1.604-.007 1.804-.036 2.433z"></path></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="IconSocial" class="p-[6px] x-el x-el-svg c1-1 c1-2 c1-b8 c1-1h c1-29 c1-3a c1-3b c1-3c c1-3d c1-b c1-c c1-d c1-e c1-f c1-g"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16.9723 10.8705C17.0707 10.8698 17.1692 10.8648 17.2676 10.8554L17.269 10.8547V8.85796C15.7233 8.7452 14.4807 7.54139 14.3184 6H12.5996L12.5816 14.3771C12.5816 15.4049 11.6737 16.2144 10.6459 16.2144C9.61878 16.2144 8.7856 15.3819 8.7856 14.3541C8.7856 13.327 9.61806 12.4938 10.6459 12.4938C10.701 12.4938 10.7545 12.5012 10.808 12.5085C10.8291 12.5114 10.8502 12.5143 10.8714 12.5168V10.7197C10.8503 10.7185 10.8292 10.717 10.808 10.7156C10.7543 10.7119 10.7005 10.7082 10.6459 10.7082C8.63189 10.7082 7 12.3401 7 14.3541C7 16.3681 8.63189 18 10.6459 18C12.6599 18 14.2918 16.3674 14.2918 14.3541V9.4218C14.8844 10.3261 15.8921 10.8705 16.9723 10.8705Z"></path></svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="mb-6 text-sm text-gray6">Bản quyền © 2024 Jullytea - Mọi quyền được bảo lưu.</p>
+            <nav class="footer-nav">
+                <ul class="flex max-md:flex-col items-center justify-center text-base text-white tracking-[1.008px]">
+                    <li>
+                        <a class="inline-block px-2 py-1" href="home.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a class="inline-block px-2 py-1" href="home.html">Chính sách về quyển riêng tư</a>
+                    </li>
+                    <li>
+                        <a class="inline-block px-2 py-1" href="home.html">Điều khoản & Điều kiện</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="divider w-[50px] mx-auto h-[1px] mt-10 mb-6 bg-primaryLight"></div>
+            <p class="text-sm leading-normal text-gray6">Được cung cấp bởi 
+                <a href="#" class="pl-[2px] text-white transition-all hover:text-gray">GoDaddy</a>
+            </p>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
 </body>
 </html>

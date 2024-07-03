@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-opensans;
+}
+
+.container-xl {
+    @apply xl:w-[1160px] xl:max-w-[1160px] px-6;
+}
+
+.container-2xl {
+    @apply 2xl:max-w-[1280px] 2xl:w-[1280px];
+}
+
+.text-theme {
+    @apply lg:tracking-[1.008px] 2xl:tracking-[1.134px] lg:text-base 2xl:text-lg 2xl:leading-6;
+}
+
+.header-nav {
+    .link-dropdown {
+        .menu-dropdown {
+            @apply hidden
+        }
+
+        &.active {
+            .icon-arrow-down {
+                @apply rotate-180;
+            }
+
+            .menu-dropdown {
+                @apply flex
+            }
+        }
+    }
+}
+
+input {
+    @apply outline-none;
+    line-height: normal
+}
+
+.button-primary {
+    @apply text-white bg-primary hover:bg-primaryLight py-2 px-8 text-base font-bold min-h-[56px];
+}
+
+.button-primary-small {
+    @apply text-white bg-primary hover:bg-primaryLight py-1 px-4 text-sm font-bold min-h-[40px];
+}
+
+.nav-mobile {
+    @apply left-[-150%];
+    line-height: normal;
+    letter-spacing: normal;
+
+    a {
+        @apply text-[22px];
+    }
+
+    &.is_show {
+        @apply left-0;
+    }
+}
+
+input#email-subscribe:focus{
+    box-shadow: currentcolor 0px 0px 0px 1px inset;
+
+    + label{
+        @apply text-red1 top-2 text-[12px];
+    }
+}
+
+.flex-center{
+    @apply flex items-center justify-center;
+}
