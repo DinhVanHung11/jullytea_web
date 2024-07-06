@@ -716,6 +716,10 @@ video {
   max-height: 45vh;
 }
 
+.max-h-\[72px\] {
+  max-height: 72px;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -787,6 +791,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-4 {
@@ -949,12 +957,25 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .pl-1 {
@@ -985,6 +1006,10 @@ video {
   font-family: Georgia, serif;
 }
 
+.text-\[19px\] {
+  font-size: 19px;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
@@ -1003,8 +1028,16 @@ video {
   line-height: 1.25rem;
 }
 
+.leading-\[1\.25\] {
+  line-height: 1.25;
+}
+
 .leading-\[1\.4\] {
   line-height: 1.4;
+}
+
+.leading-\[1\.5\] {
+  line-height: 1.5;
 }
 
 .leading-\[27\.5px\] {
@@ -1047,6 +1080,11 @@ video {
   color: rgb(247 247 247 / var(--tw-text-opacity));
 }
 
+.text-gray10 {
+  --tw-text-opacity: 1;
+  color: rgb(89 89 89 / var(--tw-text-opacity));
+}
+
 .text-gray2 {
   --tw-text-opacity: 1;
   color: rgb(164 164 164 / var(--tw-text-opacity));
@@ -1065,6 +1103,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-dark4 {
+  --tw-text-opacity: 1;
+  color: rgb(87 87 87 / var(--tw-text-opacity));
 }
 
 .shadow-shadow1 {
@@ -1086,6 +1129,8 @@ body {
 .custom-container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -1120,6 +1165,12 @@ body {
     line-height: 1.5rem;
     letter-spacing: 1.134px;
   }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-header {
@@ -1158,6 +1209,18 @@ body {
         display: flex;
       }
     }
+  }
+}
+
+.nav-mobile {
+  left: -150%;
+  line-height: normal;
+  letter-spacing: normal;
+  a {
+    font-size: 22px;
+  }
+  &.is_show {
+    left: 0px;
   }
 }
 
@@ -1221,38 +1284,6 @@ input {
   }
 }
 
-.nav-mobile {
-  left: -150%;
-  line-height: normal;
-  letter-spacing: normal;
-  a {
-    font-size: 22px;
-  }
-  &.is_show {
-    left: 0px;
-  }
-}
-
-input#email-subscribe:focus{
-  box-shadow: currentcolor 0px 0px 0px 1px inset;
-  + label {
-    top: 0.5rem;
-  }
-  + label {
-    font-size: 12px;
-  }
-  + label {
-    --tw-text-opacity: 1;
-    color: rgb(84 12 16 / var(--tw-text-opacity));
-  }
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .category-item {
   span {
     transition: all 0.3s ease;
@@ -1271,6 +1302,20 @@ input#email-subscribe:focus{
     img {
       transform: scale(1.05);
     }
+  }
+}
+
+input#email-subscribe:focus{
+  box-shadow: currentcolor 0px 0px 0px 1px inset;
+  + label {
+    top: 0.5rem;
+  }
+  + label {
+    font-size: 12px;
+  }
+  + label {
+    --tw-text-opacity: 1;
+    color: rgb(84 12 16 / var(--tw-text-opacity));
   }
 }
 
@@ -1367,8 +1412,8 @@ input#email-subscribe:focus{
     height: auto;
   }
 
-  .md\:w-full {
-    width: 100%;
+  .md\:min-h-\[300px\] {
+    min-height: 300px;
   }
 
   .md\:max-w-\[22\.08\%\] {
@@ -1387,12 +1432,29 @@ input#email-subscribe:focus{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:gap-12 {
     gap: 3rem;
   }
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:text-\[16px\] {
@@ -1405,8 +1467,16 @@ input#email-subscribe:focus{
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-\[35\%\] {
@@ -1429,13 +1499,12 @@ input#email-subscribe:focus{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:gap-12 {
-    gap: 3rem;
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:py-4 {
@@ -1465,5 +1534,9 @@ input#email-subscribe:focus{
 
   .\32xl\:text-\[48px\] {
     font-size: 48px;
+  }
+
+  .\32xl\:text-\[24px\] {
+    font-size: 24px;
   }
 }
