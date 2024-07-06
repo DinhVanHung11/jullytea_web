@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+//Gernal Style
 body {
     @apply font-opensans;
 }
@@ -14,6 +15,12 @@ body {
     @apply lg:tracking-[1.008px] 2xl:tracking-[1.134px] lg:text-base 2xl:text-lg 2xl:leading-6;
 }
 
+.flex-center{
+    @apply flex items-center justify-center;
+}
+//End Gernal Style
+
+//Components Header Style
 .page-header {
     .logo {
         img {
@@ -56,27 +63,6 @@ body {
     }
 }
 
-.form-search{
-    @apply hidden;
-
-    &.is_show {
-        @apply flex;
-    }
-}
-
-input {
-    @apply outline-none;
-    line-height: normal
-}
-
-.button-primary {
-    @apply text-white bg-primary hover:bg-primaryLight py-2 px-8 text-base font-bold min-h-[56px];
-}
-
-.button-primary-small {
-    @apply text-white bg-primary hover:bg-primaryLight py-1 px-4 text-sm 2xl:text-base font-bold min-h-[40px];
-}
-
 .nav-mobile {
     @apply left-[-150%];
     line-height: normal;
@@ -91,18 +77,33 @@ input {
     }
 }
 
-input#email-subscribe:focus{
-    box-shadow: currentcolor 0px 0px 0px 1px inset;
+.form-search{
+    @apply hidden;
 
-    + label{
-        @apply text-red1 top-2 text-[12px];
+    &.is_show {
+        @apply flex;
     }
 }
+//End Components Style
 
-.flex-center{
-    @apply flex items-center justify-center;
+//Input Style
+input {
+    @apply outline-none;
+    line-height: normal
+}
+//End Input Style
+
+//Button Style
+.button-primary {
+    @apply text-white bg-primary hover:bg-primaryLight py-2 px-8 text-base font-bold min-h-[56px];
 }
 
+.button-primary-small {
+    @apply text-white bg-primary hover:bg-primaryLight py-1 px-4 text-sm 2xl:text-base font-bold min-h-[40px];
+}
+//End Button Style
+
+//Home Page Style
 .category-item {
     span {
         transition: all 0.3s ease;
@@ -127,3 +128,12 @@ input#email-subscribe:focus{
         }
     }
 }
+
+input#email-subscribe:focus{
+    box-shadow: currentcolor 0px 0px 0px 1px inset;
+
+    + label{
+        @apply text-red1 top-2 text-[12px];
+    }
+}
+//End Home Page Style

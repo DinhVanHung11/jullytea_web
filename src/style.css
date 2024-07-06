@@ -1417,10 +1417,6 @@ input#email-subscribe:focus{
     width: 65%;
   }
 
-  .lg\:w-\[984px\] {
-    width: 984px;
-  }
-
   .lg\:max-w-\[66\.6667\%\] {
     max-width: 66.6667%;
   }
@@ -1455,10 +1451,6 @@ input#email-subscribe:focus{
 
   .xl\:w-\[1112px\] {
     width: 1112px;
-  }
-
-  .xl\:w-\[1160px\] {
-    width: 1160px;
   }
 
   .xl\:text-\[44px\] {
