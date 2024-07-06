@@ -18,6 +18,8 @@ module.exports = {
         "gray5": "rgb(226, 226, 226)",
         "gray6": "rgb(209, 190, 190)",
         "gray7": "rgb(218, 218, 218)",
+        "gray8": "rgba(0, 0, 0, .2)",
+        "gray9": "rgb(246, 246, 246)",
         "pink1": "rgb(245, 172, 174)",
         "grayBorder": "rgba(76, 76, 76, 0.5)",
       },
