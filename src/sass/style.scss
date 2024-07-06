@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-//Gernal Style
 body {
     @apply font-opensans;
 }
 
 .custom-container {
-    @apply xl:w-[1160px] lg:w-[984px] 2xl:w-[1280px] mx-auto;
+    @apply xl:w-[1160px] lg:w-[984px] 2xl:w-[1280px] mx-auto px-6;
 }
 
 .text-theme {
@@ -18,9 +17,7 @@ body {
 .flex-center{
     @apply flex items-center justify-center;
 }
-//End Gernal Style
 
-//Components Header Style
 .page-header {
     .logo {
         img {
@@ -84,16 +81,12 @@ body {
         @apply flex;
     }
 }
-//End Components Style
 
-//Input Style
 input {
     @apply outline-none;
     line-height: normal
 }
-//End Input Style
 
-//Button Style
 .button-primary {
     @apply text-white bg-primary hover:bg-primaryLight py-2 px-8 text-base font-bold min-h-[56px];
 }
@@ -101,9 +94,7 @@ input {
 .button-primary-small {
     @apply text-white bg-primary hover:bg-primaryLight py-1 px-4 text-sm 2xl:text-base font-bold min-h-[40px];
 }
-//End Button Style
 
-//Home Page Style
 .category-item {
     span {
         transition: all 0.3s ease;
@@ -136,4 +127,3 @@ input#email-subscribe:focus{
         @apply text-red1 top-2 text-[12px];
     }
 }
-//End Home Page Style
