@@ -49,12 +49,12 @@ $(document).ready(function () {
 
     //Form Order Contact Page
     $('.contact-order .btn-close-form-order').click(function() {
-        $(this).parent().hide();
-        $('.contact-order .btn-open-form-order').show();
+        $('.contact-order').removeClass('show-form');
+        $('.contact-info').removeClass('show-form');
     });
 
     $('.contact-order .btn-open-form-order').click(function() {
-        $(this).hide();
-        $(this).parent().find('.form-order').show();
+        $('.contact-order').addClass('show-form');
+        $('.contact-info').addClass('show-form');
     });
 });

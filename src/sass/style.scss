@@ -95,31 +95,6 @@ input {
     @apply text-white bg-primary hover:bg-primaryLight py-1 px-4 text-sm 2xl:text-base font-bold min-h-[40px];
 }
 
-.category-item {
-    span {
-        transition: all 0.3s ease;
-    }
-
-    a, img{
-        transition: all 0.3s ease;
-    }
-
-    &:hover {
-        a {
-            background: transparent;
-            
-            span {
-                transform: scale(1);
-                text-shadow: 2px 4px 2px rgba(0,0,0,0.2);
-            }
-        }
-
-        img {
-            transform: scale(1.05);
-        }
-    }
-}
-
 input.input-primary:focus{
     box-shadow: currentcolor 0px 0px 0px 1px inset;
 
@@ -131,5 +106,89 @@ input.input-primary:focus{
 textarea.textarea-primary {
     &:focus {
         box-shadow: currentcolor 0px 0px 0px 1px inset;
+    }
+}
+
+.page-index{
+    .category-item {
+        span {
+            transition: all 0.3s ease;
+        }
+    
+        a, img{
+            transition: all 0.3s ease;
+        }
+    
+        &:hover {
+            a {
+                background: transparent;
+                
+                span {
+                    transform: scale(1);
+                    text-shadow: 2px 4px 2px rgba(0,0,0,0.2);
+                }
+            }
+    
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.page-contact {
+    .contact-order {
+        &.show-form {
+            .btn-open-form-order {
+                @apply max-lg:hidden;
+            }
+
+            .form-order {
+                @apply max-lg:block;
+            }
+        }
+
+        &:not(.show-form) {
+            .btn-open-form-order {
+                @apply max-lg:block;
+            }
+
+            .form-order {
+                @apply max-lg:hidden;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1023px) {
+    .page-contact{
+        .contact-info {
+            &.show-form {
+                height: 658px;
+                overflow: hidden;
+            }
+        }
+
+        .contact-order {
+            &.show-form {
+                .form-order {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                    max-height: 658px;
+                }
+            }
+
+            .form-order {
+                position: absolute;
+                background: white;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 56px 0;
+                transform: translate3d(-120%, 0px, 0px);
+                transition: transform 0.8s ease 0s, opacity 0.1s ease 0s;
+            }
+        }
     }
 }

@@ -137,89 +137,95 @@
     <main class="page-main">
         <section class="section-contact">
             <div class="flex max-lg:flex-col-reverse">
-                <div class="px-6 py-10 contact-info">
-                    <h1 class="text-[22px] leading-[1.4] text-dark font-georgia pb-4 border-b border-gray5 mb-10">Hãy ghé thăm Jully Tea ngay nhé!</h1>
-                    <div class="mb-10">
-                        <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Cẩm Thượng Hiên</h4>
-                        <p class="text-base text-gray4">Cẩm Thượng Hiên - Một quán trà nhỏ nằm nép mình bên Hồ Tây thơ mộng, là nơi dừng chân để bạn thưởng thức những chén trà thơm ngon, bắt đầu hành trình khám phá văn hoá trà và tận hưởng nhịp sống chậm rãi trong từng khoảnh khắc.</p>
-                    </div>
-                    <div class="mb-10">
-                        <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Địa chỉ</h4>
-                        <p class="mb-6 text-base text-gray4">66B ngõ 12 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội</p>
-                        <p class="text-base text-gray4">Hotline: <a class="text-primary" href="tel:0833158315">0833158315</a></p>
-                        <p class="text-base text-gray4">
-                            Email: <a class="text-primary" href="mailto:sales@jullytea.com">sales@jullytea.com</a>
-                        </p>
-                    </div>
-                    <div class="mb-10">
-                        <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Giờ Mở Cửa</h4>
-                        <p class="flex items-center gap-1 text-base cursor-pointer text-gray4 time-opening-today">
-                            Mở cửa ngày hôm nay 
-                            <span class="text-primary">09:00 – 22:00 </span> 
-                            <span class="pt-[2px] text-primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="x-el x-el-svg c2-1 c2-2 c2-r c2-s c2-t c2-66 c2-v c2-w c2-3o c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032"></path></svg>
-                            </span>
-                        </p>
-                        <table class="hidden text-base time-opening-list text-gray4">
-                            <tr class="cursor-pointer monday">
-                                <td>Th 2</td>
-                                <td class="pl-1">09:00 - 22:15</td>
-                                <td>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="rotate-180 x-el x-el-svg c2-1 c2-2 c2-r c2-s c2-t c2-66 c2-v c2-w c2-3o c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032"></path></svg>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Th 3</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>Th 4</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>Th 5</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>Th 6</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>Th 7</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>CN</td>
-                                <td class="pl-1">09:00 - 22:00</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="contact-order">
-                        <button class="w-full md:w-auto tracking-[1.008px] button-primary btn-open-form-order">Hãy gọi để đặt bàn</button>
-                        <form action="" class="hidden form-order">
-                            <h4 class="text-[22px] leading-[1.25] text-dark mb-6 mx-6">Hãy gọi để đặt bàn!</h4>
-                            <div>
-                                <div class="relative max-md:mb-6 md:flex-1">
-                                    <input type="text" name="name" class="w-full px-4 pt-6 pb-2 transition-all border input-primary border-gray5">
-                                    <label for="" class="absolute pointer-events-none transition-all text-gray4 left-4 top-[30%]">Tên</label>
-                                </div>
-                                <div class="relative max-md:mb-6 md:flex-1">
-                                    <input type="email" name="name" class="w-full px-4 pt-6 pb-2 transition-all border input-primary border-gray5 required">
-                                    <label for="" class="absolute pointer-events-none transition-all text-gray4 left-4 top-[30%]">Email*</label>
-                                    <p class="mt-1 text-base input-error text-red2">Vui lòng nhập địa chỉ email hợp lệ.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <textarea name="" class="w-full p-4 border outline-none border-gray5 textarea-primary" placeholder="Thông điệp" rows="4"></textarea>
-                                </div>
-                                <button class="w-full mb-6 button-primary">Gửi</button>
-                                <p class="text-[12px] leading-[1.5] text-gray10 text-center pt-2 pb-4">Trang này được bảo vệ bởi reCAPTCHA và <a href="">Chính sách về quyền riêng tư</a> của Google và có áp dụng <a href="">Điều khoản dịch vụ</a></p>
-                            </div>
-                            <p class="text-base text-center underline cursor-pointer text-primary btn-close-form-order">
-                                Huỷ
+                <div class="contact-info lg:max-w-[50%] relative">
+                    <div class="px-6 py-10 lg:max-w-[70%] lg:mx-auto">
+                        <h1 class="text-[22px] leading-[1.4] text-dark font-georgia pb-4 border-b border-gray5 mb-10">Hãy ghé thăm Jully Tea ngay nhé!</h1>
+                        <div class="mb-10">
+                            <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Cẩm Thượng Hiên</h4>
+                            <p class="text-base text-gray4">Cẩm Thượng Hiên - Một quán trà nhỏ nằm nép mình bên Hồ Tây thơ mộng, là nơi dừng chân để bạn thưởng thức những chén trà thơm ngon, bắt đầu hành trình khám phá văn hoá trà và tận hưởng nhịp sống chậm rãi trong từng khoảnh khắc.</p>
+                        </div>
+                        <div class="mb-10">
+                            <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Địa chỉ</h4>
+                            <p class="mb-6 text-base text-gray4">66B ngõ 12 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội</p>
+                            <p class="text-base text-gray4">Hotline: <a class="text-primary" href="tel:0833158315">0833158315</a></p>
+                            <p class="text-base text-gray4">
+                                Email: <a class="text-primary" href="mailto:sales@jullytea.com">sales@jullytea.com</a>
                             </p>
-                        </form>
+                        </div>
+                        <div class="mb-10">
+                            <h4 class="text-[22px] leading-[1.25] text-dark mb-6">Giờ Mở Cửa</h4>
+                            <p class="flex items-center gap-1 text-base cursor-pointer text-gray4 time-opening-today">
+                                Mở cửa ngày hôm nay 
+                                <span class="text-primary">09:00 – 22:00 </span> 
+                                <span class="pt-[2px] text-primary">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="x-el x-el-svg c2-1 c2-2 c2-r c2-s c2-t c2-66 c2-v c2-w c2-3o c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032"></path></svg>
+                                </span>
+                            </p>
+                            <table class="hidden text-base time-opening-list text-gray4">
+                                <tr class="cursor-pointer monday">
+                                    <td>Th 2</td>
+                                    <td class="pl-1">09:00 - 22:15</td>
+                                    <td>
+                                        <span>
+                                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="rotate-180 x-el x-el-svg c2-1 c2-2 c2-r c2-s c2-t c2-66 c2-v c2-w c2-3o c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032"></path></svg>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Th 3</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Th 4</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Th 5</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Th 6</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Th 7</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>CN</td>
+                                    <td class="pl-1">09:00 - 22:00</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="contact-order">
+                            <button class="w-full md:w-auto tracking-[1.008px] button-primary btn-open-form-order">Hãy gọi để đặt bàn</button>
+                            <form action="" class="max-lg:hidden form-order">
+                                <div class="max-w-[600px] mx-auto lg:px-6 lg:pb-6">
+                                    <h4 class="text-[22px] leading-[1.25] 2xl:text-[24px] text-dark mb-6 max-lg:mx-6">Hãy gọi để đặt bàn!</h4>
+                                    <div>
+                                        <div class="relative mb-6 md:flex-1">
+                                            <input type="text" name="name" class="w-full px-4 pt-6 pb-2 transition-all border input-primary border-gray5">
+                                            <label for="" class="absolute pointer-events-none transition-all text-gray4 left-4 top-[30%]">Tên</label>
+                                        </div>
+                                        <div class="relative mb-6 md:flex-1">
+                                            <input type="email" name="name" class="w-full px-4 pt-6 pb-2 transition-all border input-primary border-gray5 required">
+                                            <label for="" class="absolute pointer-events-none transition-all text-gray4 left-4 top-[30%]">Email*</label>
+                                            <p class="mt-1 text-base input-error text-red2">Vui lòng nhập địa chỉ email hợp lệ.</p>
+                                        </div>
+                                        <div class="mb-6">
+                                            <textarea name="" class="w-full p-4 border outline-none border-gray5 textarea-primary" placeholder="Thông điệp" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:gap-x-4 lg:gap-y-6">
+                                        <button class="max-lg:mb-6 max-lg:w-full button-primary lg:order-2">Gửi</button>
+                                        <p class="lg:order-1 text-[12px] 2xl:text-[18px] leading-[1.5] text-gray10 text-center pt-2 pb-4">Trang này được bảo vệ bởi reCAPTCHA và <a href="">Chính sách về quyền riêng tư</a> của Google và có áp dụng <a href="">Điều khoản dịch vụ</a></p>
+                                        <p class="text-base text-center underline cursor-pointer lg:order-3 text-primary btn-close-form-order">
+                                            Huỷ
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="w-full contact-map">

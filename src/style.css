@@ -622,11 +622,6 @@ video {
   margin: -6px;
 }
 
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -733,6 +728,10 @@ video {
   max-height: 45vh;
 }
 
+.max-h-\[72px\] {
+  max-height: 72px;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -764,6 +763,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .max-w-max {
@@ -813,6 +816,10 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-4 {
@@ -975,6 +982,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -985,6 +997,10 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .pl-1 {
@@ -1025,6 +1041,10 @@ video {
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[19px\] {
+  font-size: 19px;
 }
 
 .text-\[22px\] {
@@ -1090,6 +1110,11 @@ video {
 .text-dark3 {
   --tw-text-opacity: 1;
   color: rgb(21 21 21 / var(--tw-text-opacity));
+}
+
+.text-dark4 {
+  --tw-text-opacity: 1;
+  color: rgb(87 87 87 / var(--tw-text-opacity));
 }
 
 .text-gray1 {
@@ -1315,27 +1340,6 @@ input {
   }
 }
 
-.category-item {
-  span {
-    transition: all 0.3s ease;
-  }
-  a, img{
-    transition: all 0.3s ease;
-  }
-  &:hover {
-    a {
-      background: transparent;
-      span {
-        transform: scale(1);
-        text-shadow: 2px 4px 2px rgba(0,0,0,0.2);
-      }
-    }
-    img {
-      transform: scale(1.05);
-    }
-  }
-}
-
 input.input-primary:focus{
   box-shadow: currentcolor 0px 0px 0px 1px inset;
   + label {
@@ -1353,6 +1357,88 @@ input.input-primary:focus{
 textarea.textarea-primary {
   &:focus {
     box-shadow: currentcolor 0px 0px 0px 1px inset;
+  }
+}
+
+.page-index{
+  .category-item {
+    span {
+      transition: all 0.3s ease;
+    }
+    a, img{
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      a {
+        background: transparent;
+        span {
+          transform: scale(1);
+          text-shadow: 2px 4px 2px rgba(0,0,0,0.2);
+        }
+      }
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.page-contact {
+  .contact-order {
+    &.show-form {
+      @media not all and (min-width: 1024px) {
+        .btn-open-form-order {
+          display: none;
+        }
+      }
+      @media not all and (min-width: 1024px) {
+        .form-order {
+          display: block;
+        }
+      }
+    }
+    &:not(.show-form) {
+      @media not all and (min-width: 1024px) {
+        .btn-open-form-order {
+          display: block;
+        }
+      }
+      @media not all and (min-width: 1024px) {
+        .form-order {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .page-contact{
+    .contact-info {
+      &.show-form {
+        height: 658px;
+        overflow: hidden;
+      }
+    }
+    .contact-order {
+      &.show-form {
+        .form-order {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+          max-height: 658px;
+        }
+      }
+      .form-order {
+        position: absolute;
+        background: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 56px 0;
+        transform: translate3d(-120%, 0px, 0px);
+        transition: transform 0.8s ease 0s, opacity 0.1s ease 0s;
+      }
+    }
   }
 }
 
@@ -1387,8 +1473,21 @@ textarea.textarea-primary {
 }
 
 @media not all and (min-width: 1024px) {
+  .max-lg\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .max-lg\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .max-lg\:hidden {
     display: none;
+  }
+
+  .max-lg\:w-full {
+    width: 100%;
   }
 
   .max-lg\:flex-col-reverse {
@@ -1453,6 +1552,10 @@ textarea.textarea-primary {
     height: auto;
   }
 
+  .md\:min-h-\[300px\] {
+    min-height: 300px;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -1473,12 +1576,29 @@ textarea.textarea-primary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:gap-12 {
     gap: 3rem;
   }
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:text-\[16px\] {
@@ -1491,8 +1611,37 @@ textarea.textarea-primary {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
+  }
+
+  .lg\:order-3 {
+    order: 3;
+  }
+
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:min-h-\[658px\] {
+    min-height: 658px;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-\[35\%\] {
@@ -1503,8 +1652,16 @@ textarea.textarea-primary {
     width: 65%;
   }
 
+  .lg\:max-w-\[50\%\] {
+    max-width: 50%;
+  }
+
   .lg\:max-w-\[66\.6667\%\] {
     max-width: 66.6667%;
+  }
+
+  .lg\:max-w-\[70\%\] {
+    max-width: 70%;
   }
 
   .lg\:max-w-\[83\.3333\%\] {
@@ -1515,13 +1672,47 @@ textarea.textarea-primary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:gap-12 {
     gap: 3rem;
+  }
+
+  .lg\:gap-x-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+
+  .lg\:gap-y-6 {
+    row-gap: 1.5rem;
+  }
+
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -1542,6 +1733,14 @@ textarea.textarea-primary {
 @media (min-width: 1536px) {
   .\32xl\:w-\[1280px\] {
     width: 1280px;
+  }
+
+  .\32xl\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .\32xl\:text-\[24px\] {
+    font-size: 24px;
   }
 
   .\32xl\:text-\[48px\] {
