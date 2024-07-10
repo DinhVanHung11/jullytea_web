@@ -120,10 +120,16 @@ input {
     }
 }
 
-input#email-subscribe:focus{
+input.input-primary:focus{
     box-shadow: currentcolor 0px 0px 0px 1px inset;
 
     + label{
         @apply text-red1 top-2 text-[12px];
+    }
+}
+
+textarea.textarea-primary {
+    &:focus {
+        box-shadow: currentcolor 0px 0px 0px 1px inset;
     }
 }
